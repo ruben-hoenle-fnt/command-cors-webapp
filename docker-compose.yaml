@@ -1,10 +1,17 @@
 version: '3.9'
 
 services:
-  command-cors-webapp:
-    container_name: command-cors-webapp
+  command-cors-webapp-no-proxy:
+    container_name: command-cors-webapp-no-proxy
     build:
-      context: .
+      context: ./no-proxy
       dockerfile: Dockerfile
     ports:
       - 3000:80
+  command-cors-webapp-with-proxy:
+    container_name: command-cors-webapp-with-proxy
+    build:
+      context: ./with-proxy
+      dockerfile: Dockerfile
+    ports:
+      - 4000:80

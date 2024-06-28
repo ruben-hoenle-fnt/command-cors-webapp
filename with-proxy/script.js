@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await fetch('https://command-dev.fntgrp.com:1079/axis/api/rest/businessGateway/login', {
+      const response = await fetch('/axis/api/rest/businessGateway/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
